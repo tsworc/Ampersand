@@ -65,9 +65,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Queue.h" />
+    <ClInclude Include="QueueTester.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="StackTester.h" />
   </ItemGroup>
