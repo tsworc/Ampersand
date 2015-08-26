@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Headers/StackTester.h"
+#include "StackTester.h"
 
 int main(int argc, char*argv)
 {
