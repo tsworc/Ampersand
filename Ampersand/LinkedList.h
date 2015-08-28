@@ -17,6 +17,7 @@ public:
 	void add_as_first(int num);
 	void add_after(int c, int num);
 	void del(int num);
+	int element_at(int c);
 	void display();
 	int count();
 };

@@ -3,12 +3,12 @@
 #include <iostream>
 using namespace std;
 
-#define MAX 5 //Max queue size
+#define MAX_QUEUE_SIZE 5 //Max queue size
 
 class Queue
 {
 private:
-	int t[MAX];
+	int t[MAX_QUEUE_SIZE];
 	int al; //addition end
 	int dl; //deletion end
 public:

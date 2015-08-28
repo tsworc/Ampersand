@@ -52,7 +52,7 @@ void Queue::add(int item)
 	else
 	{
 		al++; //increment the add end
-		if (al == MAX) //out of bounds?
+		if (al == MAX_QUEUE_SIZE) //out of bounds?
 		{
 			cout << "Queue is Full\n";
 			al--;

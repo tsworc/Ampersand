@@ -53,5 +53,8 @@
     <ClInclude Include="LinkedList.h">
       <Filter>Header Files\Collections</Filter>
     </ClInclude>
+    <ClInclude Include="Catch.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
