@@ -1,5 +1,5 @@
 #include "Queue.h"
-
+#include "Catch.hpp"
 
 Queue::Queue()
 {
@@ -62,6 +62,11 @@ void Queue::add(int item)
 	t[al] = item;
 }
 
+int Queue::count()
+{
+	return al + 1;
+}
+
 void Queue::display()
 {
 	if (dl != -1) //not empty?
@@ -73,4 +78,19 @@ void Queue::display()
 	{
 		cout << "EMPTY";
 	}
+}
+
+SCENARIO("Queues can add, del, and count")
+{
+	int data[5] = { 32, 23, 45, 99, 24 };
+	Queue _queue;
+	REQUIRE(_queue.count() == 0);
+
+	for (int iter = 0; iter < 5; ++iter)
+		_queue.add(data[iter]);
+	REQUIRE(_queue.count() == 5);
+
+	for (int iter = 0; iter < 5; ++iter)
+		_queue.del();
+	REQUIRE(_queue.count() == 0);
 }

@@ -2,7 +2,6 @@
 #include "catch.hpp"
 #include <iostream>
 #include "StackTester.h"
-#include "QueueTester.h"
 
 int main(int argc, char* const argv[])
 {
@@ -11,6 +10,5 @@ int main(int argc, char* const argv[])
 	//global cleanup
 	printf("Ampersand Program Begins...\n");
 	StackTester().Test();
-	QueueTester().Test();
 	std::cin.get();
 }

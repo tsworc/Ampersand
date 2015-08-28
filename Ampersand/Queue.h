@@ -17,4 +17,5 @@ public:
 	void del();
 	void add(int a);
 	void display();
+	int count();
 };

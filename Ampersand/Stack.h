@@ -13,5 +13,6 @@ public:
 	~Stack();
 	void push(int input);
 	int pop();
+	int count();
 };
 

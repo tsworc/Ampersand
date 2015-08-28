@@ -40,3 +40,8 @@ int Stack::pop() //Delete item. Return the deleted item.
 		return data;
 	}
 }
+
+int Stack::count()
+{
+	return top + 1;
+}

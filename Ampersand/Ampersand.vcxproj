@@ -73,7 +73,6 @@
     <ClInclude Include="Catch.hpp" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Queue.h" />
-    <ClInclude Include="QueueTester.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="StackTester.h" />
   </ItemGroup>

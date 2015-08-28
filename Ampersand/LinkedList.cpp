@@ -145,7 +145,7 @@ int LinkedList::count()
 	return c;
 }
 
-TEST_CASE("Linked List Can Add, Delete, and Count")
+TEST_CASE("Linked List Can Append, Delete, Insert, Access, and Count")
 {
 	LinkedList l;
 	l.append(12);
@@ -166,12 +166,9 @@ TEST_CASE("Linked List Can Add, Delete, and Count")
 	auto v2 = l.element_at(7);
 	CAPTURE(v2);
 	REQUIRE(v2 == 666);
-	l.display();
-	cout << "\nNo. of elements = " << l.count() << endl;
 	REQUIRE(l.count() == 10);
 	l.del(333);
 	l.del(12);
 	l.del(98); //does not contain 98
-	cout << "\nNo. of elements = " << l.count() << endl;
 	REQUIRE(l.count() == 8);
 }
