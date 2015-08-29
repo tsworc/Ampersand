@@ -70,7 +70,7 @@ int LQueue::count()
 {
 	node *q;
 	int c = 0;
-	for (q = front; q != NULL; ++q)
+	for (q = front; q != NULL; q = q->link)
 	{
 		++c;
 	}
@@ -87,5 +87,38 @@ SCENARIO("LQueues can add, delete, and count. Only limited by available memory."
 		queue.add(0);
 		queue.add(43030);
 		REQUIRE(queue.count() == 4);
+		WHEN("We delete three times.")
+		{
+			int d1 = queue.del();
+			int d2 = queue.del();
+			int d3 = queue.del();
+			THEN("We get 20, 88, and 0; and count shrinks to 1.")
+			{
+				REQUIRE(d1 == 20);
+				REQUIRE(d2 == 88);
+				REQUIRE(d3 == 0);
+				REQUIRE(queue.count() == 1);
+			}
+		}
+		WHEN("We add 30 more items.")
+		{
+			for (int i = 0; i < 30; ++i)
+				queue.add(i);
+			THEN("Count = 34")
+			{
+				REQUIRE(queue.count() == 34);
+			}
+		}
+		WHEN("We add 100 then remove 105.")
+		{
+			for (int i = 0; i < 100; ++i)
+				queue.add(i);
+			for (int i = 0; i < 105; ++i)
+				queue.del();
+			THEN("count == 0")
+			{
+				REQUIRE(queue.count() == 0);
+			}
+		}
 	}
 }

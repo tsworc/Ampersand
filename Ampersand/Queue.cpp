@@ -10,7 +10,6 @@ Queue::Queue()
 
 Queue::~Queue()
 {
-	delete [] t;
 }
 
 //Shouldnt this return the int?

@@ -37,7 +37,7 @@
       <Filter>Source Files\Collections</Filter>
     </ClCompile>
     <ClCompile Include="LQueue.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Collections</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -57,7 +57,7 @@
       <Filter>Header Files\Collections</Filter>
     </ClInclude>
     <ClInclude Include="LQueue.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Collections</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
