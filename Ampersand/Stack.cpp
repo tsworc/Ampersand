@@ -14,6 +14,7 @@ Stack::~Stack()
 void Stack::push(int a)
 {
 	top++;
+	//O(1)
 	if (top < MAX) //space available?
 	{
 		arr[top] = a; //place input on top
@@ -27,6 +28,7 @@ void Stack::push(int a)
 
 int Stack::pop() //Delete item. Return the deleted item.
 {
+	//O(1)
 	if (top == -1)
 	{
 		cout << "This Stack is empty!" << endl;
@@ -43,6 +45,7 @@ int Stack::pop() //Delete item. Return the deleted item.
 
 int Stack::count()
 {
+	//O(1)
 	return top + 1;
 }
 

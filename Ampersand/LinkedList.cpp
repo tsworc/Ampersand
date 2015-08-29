@@ -12,6 +12,7 @@ LinkedList::~LinkedList()
 	node *q;
 	if (p == NULL)
 		return;
+	//O(n)
 	while (p != NULL)
 	{
 		//store the next node
@@ -27,6 +28,7 @@ void LinkedList::append(int num)
 {
 	node *q, *t;
 
+	//O(n)
 	if (p == NULL)
 	{
 		p = new node;
@@ -48,7 +50,7 @@ void LinkedList::append(int num)
 void LinkedList::add_as_first(int num)
 {
 	node *q;
-
+	//O(1)
 	q = new node;
 	q->data = num;
 	q->link = p;
@@ -62,6 +64,7 @@ void LinkedList::add_after(int c, int num)
 	node *q, *t;
 	int i;
 	//start a chain at the head, p
+	//O(n)
 	for (i = 0, q = p; i < c; ++i)
 	{
 		q = q->link;
@@ -78,6 +81,7 @@ void LinkedList::add_after(int c, int num)
 	q->link = t;
 }
 
+//search delete
 void LinkedList::del(int num)
 {
 	node *q, *r;
@@ -92,6 +96,7 @@ void LinkedList::del(int num)
 	}
 
 	r = q;
+	//O(n)
 	while (q != NULL)
 	{
 		if (q->data == num)
@@ -113,6 +118,7 @@ int LinkedList::element_at(int c)
 {
 	node *q;
 	int i = 0;
+	//O(n)
 	for (q = p; q != NULL; q = q->link)
 	{
 		if (i == c)
@@ -127,7 +133,7 @@ void LinkedList::display()
 {
 	node *q;
 	cout << endl;
-
+	//O(n)
 	for (q = p; q != NULL; q = q->link)
 	{
 		cout << endl << q->data;
@@ -138,7 +144,7 @@ int LinkedList::count()
 {
 	node *q;
 	int c = 0;
-
+	//O(n)
 	for (q = p; q != NULL; q = q->link)
 		++c;
 

@@ -11,6 +11,7 @@ LStack::~LStack()
 	if (top == NULL)
 		return;
 
+	//O(n)
 	node *tmp;
 	while (top != NULL)
 	{
@@ -24,6 +25,7 @@ LStack::~LStack()
 //create a node behind top
 void LStack::push(int num)
 {
+	//O(1)
 	node *tmp;
 	tmp = new node;
 	if (tmp == NULL)
@@ -35,6 +37,7 @@ void LStack::push(int num)
 
 int LStack::pop()
 {
+	//O(1)
 	if (top == NULL)
 	{
 		cout << "\nStack is empty";
@@ -51,6 +54,7 @@ int LStack::pop()
 
 int LStack::count()
 {
+	//O(n)
 	node *q;
 	int c = 0;
 	for (q = top; q != NULL; q = q->link)

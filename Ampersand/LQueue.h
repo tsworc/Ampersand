@@ -9,17 +9,19 @@ using namespace std;
 struct node
 {
 	int data;
-	node* link;
+	node *link;
 };
-class LStack
+
+class LQueue
 {
 private:
-	node* top;
+	node *front;
+	node *rear;
 public:
-	LStack();
-	void push(int num);
-	int pop();
+	LQueue();
+	~LQueue();
+	void add(int num);
+	int del();
 	int count();
-	~LStack();
 };
 

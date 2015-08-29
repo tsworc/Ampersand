@@ -10,8 +10,10 @@ Queue::Queue()
 
 Queue::~Queue()
 {
+	delete [] t;
 }
 
+//Shouldnt this return the int?
 void Queue::del()
 {
 	int tmp;
@@ -22,12 +24,13 @@ void Queue::del()
 	else
 	{
 		//loop from front to add end
+		//O(n)
 		for (int j = 0; j <= al; ++j)
 		{
 			if ((j + 1) <= al) // is there a next element?
 			{
 				tmp = t[j + 1]; //store next element
-				t[j] = tmp; //move next element forward
+				t[j] = tmp; //move next element back
 			}
 			else //this is the last element
 			{
@@ -43,6 +46,7 @@ void Queue::del()
 
 void Queue::add(int item)
 {
+	//O(1)
 	if (dl == -1 && al == -1) //empty?
 	{
 		dl++;
@@ -69,6 +73,7 @@ int Queue::count()
 
 void Queue::display()
 {
+	//O(n)
 	if (dl != -1) //not empty?
 	{
 		for (int iter = 0; iter <= al; ++iter) //loop from start to add end
