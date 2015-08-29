@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Testers">
-      <UniqueIdentifier>{3c4821b7-8ab8-4729-aef0-c22c8aa82f55}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Collections">
       <UniqueIdentifier>{49b646f6-55ce-49ea-9b5f-67ca946f4c3c}</UniqueIdentifier>
     </Filter>
@@ -38,9 +35,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="StackTester.h">
-      <Filter>Header Files\Testers</Filter>
-    </ClInclude>
     <ClInclude Include="Stack.h">
       <Filter>Header Files\Collections</Filter>
     </ClInclude>
