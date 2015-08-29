@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Collections">
       <UniqueIdentifier>{841d5924-ea73-4e56-bb7b-0ebc96f8bc9b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Temp">
+      <UniqueIdentifier>{26622587-f17a-4aa3-a6a3-0bcf2fb1c6d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -38,6 +41,9 @@
     </ClCompile>
     <ClCompile Include="LQueue.cpp">
       <Filter>Source Files\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="MathFuncsLibTester.cpp">
+      <Filter>Source Files\Temp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
