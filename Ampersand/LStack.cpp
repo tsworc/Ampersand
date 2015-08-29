@@ -58,7 +58,7 @@ int LStack::count()
 	return c;
 }
 
-SCENARIO("LStacks can Push and Count")
+SCENARIO("LStacks can Push, Pop, and Count. Without limit.")
 {
 	LStack stack;
 	GIVEN("A stack with 5, 8, and 7")

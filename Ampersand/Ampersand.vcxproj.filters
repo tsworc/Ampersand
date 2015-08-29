@@ -34,7 +34,7 @@
       <Filter>Source Files\Collections</Filter>
     </ClCompile>
     <ClCompile Include="LStack.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Collections</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -51,7 +51,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LStack.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Collections</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
