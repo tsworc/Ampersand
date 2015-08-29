@@ -33,6 +33,9 @@
     <ClCompile Include="LinkedList.cpp">
       <Filter>Source Files\Collections</Filter>
     </ClCompile>
+    <ClCompile Include="LStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stack.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files\Collections</Filter>
     </ClInclude>
     <ClInclude Include="Catch.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

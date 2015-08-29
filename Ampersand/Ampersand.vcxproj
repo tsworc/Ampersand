@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LStack.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stack.cpp" />
@@ -72,6 +73,7 @@
   <ItemGroup>
     <ClInclude Include="Catch.hpp" />
     <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="LStack.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
