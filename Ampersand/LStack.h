@@ -14,6 +14,8 @@ private:
 public:
 	LStack();
 	void push(int num);
+	int pop();
+	int count();
 	~LStack();
 };
 
