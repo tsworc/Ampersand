@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ampersand", "Ampersand\Ampersand.vcxproj", "{FF24BEBC-D795-4BD4-8F7A-C8BB043356E6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmpCollections", "AmpCollections\AmpCollections.vcxproj", "{D19F7CAA-19FF-4372-B546-79C12B2B0F22}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmpMath", "AmpMath\AmpMath.vcxproj", "{AF22ADE7-C567-4126-A769-222AF72860C7}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{FF24BEBC-D795-4BD4-8F7A-C8BB043356E6}.Debug|Win32.Build.0 = Debug|Win32
 		{FF24BEBC-D795-4BD4-8F7A-C8BB043356E6}.Release|Win32.ActiveCfg = Release|Win32
 		{FF24BEBC-D795-4BD4-8F7A-C8BB043356E6}.Release|Win32.Build.0 = Release|Win32
-		{D19F7CAA-19FF-4372-B546-79C12B2B0F22}.Debug|Win32.ActiveCfg = Debug|Win32
-		{D19F7CAA-19FF-4372-B546-79C12B2B0F22}.Debug|Win32.Build.0 = Debug|Win32
-		{D19F7CAA-19FF-4372-B546-79C12B2B0F22}.Release|Win32.ActiveCfg = Release|Win32
-		{D19F7CAA-19FF-4372-B546-79C12B2B0F22}.Release|Win32.Build.0 = Release|Win32
 		{AF22ADE7-C567-4126-A769-222AF72860C7}.Debug|Win32.ActiveCfg = Debug|Win32
 		{AF22ADE7-C567-4126-A769-222AF72860C7}.Debug|Win32.Build.0 = Debug|Win32
 		{AF22ADE7-C567-4126-A769-222AF72860C7}.Release|Win32.ActiveCfg = Release|Win32
