@@ -65,10 +65,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DL_List.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LQueue.cpp" />
     <ClCompile Include="LStack.cpp" />
-    <ClCompile Include="L_List.cpp" />
+    <ClCompile Include="CL_List.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MathFuncsLibTester.cpp" />
     <ClCompile Include="Queue.cpp" />
@@ -76,10 +77,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp" />
+    <ClInclude Include="DL_List.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LQueue.h" />
     <ClInclude Include="LStack.h" />
-    <ClInclude Include="L_List.h" />
+    <ClInclude Include="CL_List.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>

@@ -45,7 +45,10 @@
     <ClCompile Include="Stack.cpp">
       <Filter>Source Files\Collections</Filter>
     </ClCompile>
-    <ClCompile Include="L_List.cpp">
+    <ClCompile Include="CL_List.cpp">
+      <Filter>Source Files\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="DL_List.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,7 +71,10 @@
     <ClInclude Include="Stack.h">
       <Filter>Header Files\Collections</Filter>
     </ClInclude>
-    <ClInclude Include="L_List.h">
+    <ClInclude Include="CL_List.h">
+      <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="DL_List.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
