@@ -55,9 +55,7 @@ void DL_List::add(int num)
 		return;
 	}
 	node *q;
-	q = p;
-	while (q->next != p)
-		q = q->next;
+	q = p->prev;
 	node *t;
 	t = new node;
 	t->data = num;
@@ -107,11 +105,7 @@ void DL_List::del()
 	}
 	else
 	{
-		//find end
-		while (q->next != p)
-		{
-			q = q->next;
-		}
+		q = q->prev;
 		q->next = p->next;
 		q = p;
 		p = (q->next == NULL ? NULL : p->next);
@@ -230,9 +224,15 @@ SCENARIO("DL_List can add, delete, count, and display in two directions. Size is
 		list.add(1);
 		list.add_at_beg(45);
 		REQUIRE(list.count() == 5);
-		cout << "Print list forwards and backwards." << endl;
-		list.display(1);
-		list.display(0);
+		WHEN("Print forwards and backwards")
+		{
+			THEN("The user can tell if the output is correct")
+			{
+				cout << "Print list forwards and backwards." << endl;
+				list.display(1);
+				list.display(0);
+			}
+		}
 		WHEN("2034 is added to the beginning")
 		{
 			list.add_at_beg(2034);
