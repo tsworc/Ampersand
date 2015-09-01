@@ -2,8 +2,6 @@
 
 #include <iostream>
 using namespace std;
-
-#pragma once
 //
 //Following tutorial here at
 //http://www.dreamincode.net/forums/topic/10157-data-structures-in-c-tutorial/

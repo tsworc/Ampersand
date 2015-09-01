@@ -1,5 +1,6 @@
 #define CATCH_CONFIG_RUNNER
 #include "catch.hpp"
+#include "DL_List.h"
 #include <iostream>
 
 int main(int argc, char* const argv[])
