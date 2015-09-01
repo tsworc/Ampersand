@@ -21,6 +21,7 @@ public:
 	void del();
 	void display(int type);
 	int count();
+	int element_at(int index);
 	bool operator==(DL_List);
 	bool operator!=(DL_List);
 	
