@@ -74,6 +74,7 @@
     <ClCompile Include="MathFuncsLibTester.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Stack.cpp" />
+    <ClCompile Include="tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp" />
@@ -84,6 +85,7 @@
     <ClInclude Include="CL_List.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="tree.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AmpMath\AmpMath.vcxproj">

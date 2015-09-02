@@ -51,6 +51,9 @@
     <ClCompile Include="DL_List.cpp">
       <Filter>Source Files\Collections</Filter>
     </ClCompile>
+    <ClCompile Include="tree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp">
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="DL_List.h">
       <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="tree.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
