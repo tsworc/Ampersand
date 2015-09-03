@@ -16,8 +16,9 @@ void tree::destruct(leaf *q){
 	if (q != NULL)
 	{
 		destruct(q->l);
+		leaf *right = q->r;
 		del(q->data);
-		destruct(q->r);
+		destruct(right);
 	}
 }
 
@@ -124,7 +125,7 @@ void tree::post(leaf *q)
 void tree::findfordel(int n, int &found, leaf *&parent, leaf *&x)
 {
 	leaf *q;
-	found = NO;
+	found = 0;
 	parent = NULL;
 	//x = NULL;
 	if (p == NULL)
@@ -152,6 +153,7 @@ void tree::findfordel(int n, int &found, leaf *&parent, leaf *&x)
 	}
 }
 
+//hibbard delete algorithm
 void tree::del(int num)
 {
 	leaf *parent, *x, *xsucc;
@@ -174,6 +176,8 @@ void tree::del(int num)
 	//if node to be deleted has left and right
 	if (x->l != NULL && x->r != NULL)
 	{
+		//traverse right then as far down left as possible
+		//swap this lowest number with x
 		parent = x;
 		xsucc = x->r;
 		while (xsucc->l != NULL)
@@ -188,6 +192,13 @@ void tree::del(int num)
 	//if node to be deleted has no children
 	if (x->l == NULL && x->r == NULL)
 	{
+		//special case: root node
+		if (x == p)
+		{
+			delete p;
+			p = NULL;
+			return;
+		}
 		if (parent->r == x)
 			parent->r = NULL;
 		else
@@ -199,6 +210,13 @@ void tree::del(int num)
 	//if node only has right node
 	if (x->l == NULL && x->r != NULL)
 	{
+		//special case: root node
+		if (x == p)
+		{
+			p = x->r;
+			delete x;
+			return;
+		}
 		if (parent->l == x)
 			parent->l = x->r;
 		else
@@ -210,6 +228,13 @@ void tree::del(int num)
 	//if node only has left node
 	if (x->l != NULL && x->r == NULL)
 	{
+		//special case: root node
+		if (x == p)
+		{
+			p = x->l;
+			delete x;
+			return;
+		}
 		if (parent->r == x)
 			parent->r = x->l;
 		else
@@ -228,10 +253,10 @@ SCENARIO("A tree can add, delete, and display in 3 different ways.")
 		{ 32, 16, 34, 1, 87, 13, 7, 18, 14, 19, 23, 24, 41, 5, 53 };
 		for (int iter = 0; iter < 15; ++iter)
 			t.add(data[iter]);
-		/*t.transverse();
+		//t.transverse();
 		t.del(16);
-		t.transverse();
+		//t.transverse();
 		t.del(41);
-		t.transverse();*/
+		//t.transverse();
 	}
 }
