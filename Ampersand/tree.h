@@ -20,6 +20,7 @@ private:
 		leaf *r;
 	};
 	struct leaf *p;
+	void count_in(leaf *q, int &sum);
 public:
 	tree();
 	~tree();
@@ -33,5 +34,6 @@ public:
 	void pre(leaf *q);
 	void post(leaf *q);
 	void del(int n);
+	int count();
 };
 

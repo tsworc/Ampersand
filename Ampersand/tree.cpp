@@ -244,19 +244,54 @@ void tree::del(int num)
 	}
 }
 
-SCENARIO("A tree can add, delete, and display in 3 different ways.")
+int tree::count()
+{
+	int sum = 0;
+	count_in(p, sum);
+	return sum;
+}
+void tree::count_in(leaf *q, int &sum)
+{
+	if (q != NULL)
+	{
+		count_in(q->l, sum);
+		++sum;
+		count_in(q->r, sum);
+	}
+}
+
+SCENARIO("A tree can add, delete, count, and display in 3 different ways.")
 {
 	GIVEN("An empty tree")
 	{
 		tree t;
 		int data[] =
 		{ 32, 16, 34, 1, 87, 13, 7, 18, 14, 19, 23, 24, 41, 5, 53 };
-		for (int iter = 0; iter < 15; ++iter)
-			t.add(data[iter]);
-		//t.transverse();
-		t.del(16);
-		//t.transverse();
-		t.del(41);
-		//t.transverse();
+		WHEN("15 numbers are added.")
+		{
+			for (int iter = 0; iter < 15; ++iter)
+				t.add(data[iter]);
+			THEN("Count = 15")
+			{
+				REQUIRE(t.count() == 15);
+			}
+			WHEN("Two numbers in the tree are deleted.")
+			{
+				t.del(16);
+				t.del(41);
+				THEN("Count = 13")
+				{
+					REQUIRE(t.count() == 13);
+				}
+			}
+			WHEN("A number not in the tree is deleted.")
+			{
+				t.del(408);
+				THEN("The count remains 15")
+				{
+					REQUIRE(t.count() == 15);
+				}
+			}
+		}
 	}
 }
