@@ -22,6 +22,12 @@
     <Filter Include="Source Files\Collections">
       <UniqueIdentifier>{3c891633-b7ac-4c29-8051-486d04ad3f33}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Collections\Generics">
+      <UniqueIdentifier>{196f74d4-42a0-49c2-9747-8f9ff5510fab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collections\Generics">
+      <UniqueIdentifier>{3c8913ca-c009-4233-92d7-8d339ca5e492}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -54,6 +60,9 @@
     <ClCompile Include="tree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GenericStack.cpp">
+      <Filter>Source Files\Collections\Generics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp">
@@ -82,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="tree.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericStack.h">
+      <Filter>Header Files\Collections\Generics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
