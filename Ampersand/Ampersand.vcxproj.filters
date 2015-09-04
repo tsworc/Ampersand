@@ -63,6 +63,9 @@
     <ClCompile Include="GenericStack.cpp">
       <Filter>Source Files\Collections\Generics</Filter>
     </ClCompile>
+    <ClCompile Include="TestGenericRingBuffer.cpp">
+      <Filter>Source Files\Collections\Generics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp">
