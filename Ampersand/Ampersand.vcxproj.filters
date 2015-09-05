@@ -13,90 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Temp">
-      <UniqueIdentifier>{26622587-f17a-4aa3-a6a3-0bcf2fb1c6d6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Collections">
-      <UniqueIdentifier>{8496dd0b-8e5b-41ca-8fe7-d527b3c95fa3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Collections">
-      <UniqueIdentifier>{3c891633-b7ac-4c29-8051-486d04ad3f33}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Collections\Generics">
-      <UniqueIdentifier>{196f74d4-42a0-49c2-9747-8f9ff5510fab}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Collections\Generics">
-      <UniqueIdentifier>{3c8913ca-c009-4233-92d7-8d339ca5e492}</UniqueIdentifier>
+    <Filter Include="Source Files\Testing">
+      <UniqueIdentifier>{4dd00b03-79a3-439c-8e79-767a43ae93d2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TestCollections.cpp">
+      <Filter>Source Files\Testing</Filter>
+    </ClCompile>
     <ClCompile Include="MathFuncsLibTester.cpp">
-      <Filter>Source Files\Temp</Filter>
+      <Filter>Source Files\Testing</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedList.cpp">
-      <Filter>Source Files\Collections</Filter>
-    </ClCompile>
-    <ClCompile Include="LQueue.cpp">
-      <Filter>Source Files\Collections</Filter>
-    </ClCompile>
-    <ClCompile Include="LStack.cpp">
-      <Filter>Source Files\Collections</Filter>
-    </ClCompile>
-    <ClCompile Include="Queue.cpp">
-      <Filter>Source Files\Collections</Filter>
-    </ClCompile>
-    <ClCompile Include="Stack.cpp">
-      <Filter>Source Files\Collections</Filter>
-    </ClCompile>
-    <ClCompile Include="CL_List.cpp">
-      <Filter>Source Files\Collections</Filter>
-    </ClCompile>
-    <ClCompile Include="DL_List.cpp">
-      <Filter>Source Files\Collections</Filter>
-    </ClCompile>
-    <ClCompile Include="tree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GenericStack.cpp">
-      <Filter>Source Files\Collections\Generics</Filter>
-    </ClCompile>
-    <ClCompile Include="TestGenericRingBuffer.cpp">
-      <Filter>Source Files\Collections\Generics</Filter>
+    <ClCompile Include="TestGenericCollections.cpp">
+      <Filter>Source Files\Testing</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedList.h">
-      <Filter>Header Files\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="LQueue.h">
-      <Filter>Header Files\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="LStack.h">
-      <Filter>Header Files\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="Queue.h">
-      <Filter>Header Files\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="Stack.h">
-      <Filter>Header Files\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="CL_List.h">
-      <Filter>Header Files\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="DL_List.h">
-      <Filter>Header Files\Collections</Filter>
-    </ClInclude>
-    <ClInclude Include="tree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GenericStack.h">
-      <Filter>Header Files\Collections\Generics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

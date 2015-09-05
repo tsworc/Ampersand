@@ -48,6 +48,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Tim\Documents\Ampersand\AmpCollections\Header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -77,6 +78,25 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GenericRingBuffer.h" />
+    <ClInclude Include="Header\Collections\CL_List.h" />
+    <ClInclude Include="Header\Collections\DL_List.h" />
+    <ClInclude Include="Header\Collections\Generic\GenericStack.h" />
+    <ClInclude Include="Header\Collections\LinkedList.h" />
+    <ClInclude Include="Header\Collections\LQueue.h" />
+    <ClInclude Include="Header\Collections\LStack.h" />
+    <ClInclude Include="Header\Collections\Queue.h" />
+    <ClInclude Include="Header\Collections\Stack.h" />
+    <ClInclude Include="Header\Collections\tree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Collections\CL_List.cpp" />
+    <ClCompile Include="Source\Collections\DL_List.cpp" />
+    <ClCompile Include="Source\Collections\LinkedList.cpp" />
+    <ClCompile Include="Source\Collections\LQueue.cpp" />
+    <ClCompile Include="Source\Collections\LStack.cpp" />
+    <ClCompile Include="Source\Collections\Queue.cpp" />
+    <ClCompile Include="Source\Collections\Stack.cpp" />
+    <ClCompile Include="Source\Collections\tree.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

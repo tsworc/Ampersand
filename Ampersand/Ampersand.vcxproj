@@ -65,30 +65,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DL_List.cpp" />
-    <ClCompile Include="GenericStack.cpp" />
-    <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="LQueue.cpp" />
-    <ClCompile Include="LStack.cpp" />
-    <ClCompile Include="CL_List.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MathFuncsLibTester.cpp" />
-    <ClCompile Include="Queue.cpp" />
-    <ClCompile Include="Stack.cpp" />
-    <ClCompile Include="TestGenericRingBuffer.cpp" />
-    <ClCompile Include="tree.cpp" />
+    <ClCompile Include="TestCollections.cpp" />
+    <ClCompile Include="TestGenericCollections.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp" />
-    <ClInclude Include="DL_List.h" />
-    <ClInclude Include="GenericStack.h" />
-    <ClInclude Include="LinkedList.h" />
-    <ClInclude Include="LQueue.h" />
-    <ClInclude Include="LStack.h" />
-    <ClInclude Include="CL_List.h" />
-    <ClInclude Include="Queue.h" />
-    <ClInclude Include="Stack.h" />
-    <ClInclude Include="tree.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AmpCollections\AmpCollections.vcxproj">
