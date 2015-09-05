@@ -2,9 +2,8 @@
     STATIC LIBRARY : AmpCollections Project Overview
 ========================================================================
 
-AppWizard has created this AmpCollections library project for you.
-
-No source files were created as part of your project.
+Contains stacks, queues, linked lists, double linked lists, a tree.
+A generic version of the stack is available as well as a generic ring buffer (cricular queue).
 
 
 AmpCollections.vcxproj
