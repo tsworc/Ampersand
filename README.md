@@ -23,3 +23,8 @@ C++ program and libraries. Data structures and Algorithms.
 - Intersection Tests
 - Dynamics
 - Collision Response
+
+#Audio
+- Playback
+- File Loading
+- Abtraction Layer
