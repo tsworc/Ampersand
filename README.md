@@ -1,7 +1,7 @@
 # Ampersand
 C++ program and libraries. Data structures and Algorithms.
 
-#Collections
+##Collections
 - Tree
 - Stack
 - Queue
@@ -9,22 +9,31 @@ C++ program and libraries. Data structures and Algorithms.
 - Double Link List
 - Generics*
 
-#Math
+##Math
 - Vectors
 - Matrices
 - Quaternions
 
-#Graphics
+##Graphics
 - Direct3D Window
 - OpenGL Window
 - Abstraction Layer
 
-#Physics
+##Physics
 - Intersection Tests
 - Dynamics
 - Collision Response
 
-#Audio
+##Audio
 - Playback
 - File Loading
 - Abtraction Layer
+
+##Networking
+- TCP
+- UDP
+
+##Serialization
+- Primitive Data Types
+- Arrays
+- Classes
