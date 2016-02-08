@@ -1,7 +1,9 @@
 #include "Catch.hpp"
 #include "MathFuncsLib.h"
+#include <iostream>
 
 using namespace MathFuncs;
+using namespace std;
 
 SCENARIO("MathFuncsLib can add, divide, subtract, and multiply floating point numbers.")
 {
@@ -11,6 +13,7 @@ SCENARIO("MathFuncsLib can add, divide, subtract, and multiply floating point nu
 		double b = 7.77;
 		WHEN("added together")
 		{
+			cout << "Test Addition" << endl;
 			THEN("the result is 12.77")
 			{
 				REQUIRE(MyMathFuncs::Add(a, b) == Approx(12.77));
@@ -18,6 +21,7 @@ SCENARIO("MathFuncsLib can add, divide, subtract, and multiply floating point nu
 		}
 		WHEN("subtracting b from a")
 		{
+			cout << "Test Subtraction" << endl;
 			THEN("the result is -2.77")
 			{
 				REQUIRE(MyMathFuncs::Subtract(a, b) == Approx(-2.77));
@@ -25,6 +29,7 @@ SCENARIO("MathFuncsLib can add, divide, subtract, and multiply floating point nu
 		}
 		WHEN("Multiplied")
 		{
+			cout << "Test Multiplication" << endl;
 			THEN("The result is 38.85")
 			{
 				REQUIRE(MyMathFuncs::Multipy(a, b) == Approx(38.85));
@@ -32,6 +37,7 @@ SCENARIO("MathFuncsLib can add, divide, subtract, and multiply floating point nu
 		}
 		WHEN("Dividing b from a")
 		{
+			cout << "Test Division" << endl;
 			THEN("The result is ~0.6435")
 			{
 				REQUIRE(MyMathFuncs::Divide(a, b) == Approx(0.6435));
