@@ -69,6 +69,7 @@
     <ClCompile Include="MathFuncsLibTester.cpp" />
     <ClCompile Include="TestCollections.cpp" />
     <ClCompile Include="TestGenericCollections.cpp" />
+    <ClCompile Include="TestVectors.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp" />
