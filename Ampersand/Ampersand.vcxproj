@@ -44,10 +44,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Tim\Documents\Ampersand\AmpCollections;C:\Users\Tim\Documents\Ampersand\AmpMath;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Tim\Documents\Ampersand\AmpGraphics;C:\Users\Tim\Documents\Ampersand\AmpCollections;C:\Users\Tim\Documents\Ampersand\AmpMath;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ShowProgress>LinkVerbose</ShowProgress>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -77,6 +78,9 @@
   <ItemGroup>
     <ProjectReference Include="..\AmpCollections\AmpCollections.vcxproj">
       <Project>{a9ecf180-a3cb-48d1-a4ac-1c0bdce0ee0a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AmpGraphics\AmpGraphics.vcxproj">
+      <Project>{883262c0-8583-4faa-9046-1a3a77eb8414}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AmpMath\AmpMath.vcxproj">
       <Project>{af22ade7-c567-4126-a769-222af72860c7}</Project>

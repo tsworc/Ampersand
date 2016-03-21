@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmpMath", "AmpMath\AmpMath.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmpCollections", "AmpCollections\AmpCollections.vcxproj", "{A9ECF180-A3CB-48D1-A4AC-1C0BDCE0EE0A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AmpGraphics", "AmpGraphics\AmpGraphics.vcxproj", "{883262C0-8583-4FAA-9046-1A3A77EB8414}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -27,6 +29,10 @@ Global
 		{A9ECF180-A3CB-48D1-A4AC-1C0BDCE0EE0A}.Debug|Win32.Build.0 = Debug|Win32
 		{A9ECF180-A3CB-48D1-A4AC-1C0BDCE0EE0A}.Release|Win32.ActiveCfg = Release|Win32
 		{A9ECF180-A3CB-48D1-A4AC-1C0BDCE0EE0A}.Release|Win32.Build.0 = Release|Win32
+		{883262C0-8583-4FAA-9046-1A3A77EB8414}.Debug|Win32.ActiveCfg = Debug|Win32
+		{883262C0-8583-4FAA-9046-1A3A77EB8414}.Debug|Win32.Build.0 = Debug|Win32
+		{883262C0-8583-4FAA-9046-1A3A77EB8414}.Release|Win32.ActiveCfg = Release|Win32
+		{883262C0-8583-4FAA-9046-1A3A77EB8414}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
