@@ -1,25 +1,65 @@
 /* Credit to www.directxtutorial.com */
+#include <d3d11.h>
+//#include <d3dx11.h>
+//#include <d3dx10.h>
+#pragma comment (lib, "d3d11.lib")
+//#pragma comment (lib, "d3dx11.lib")
+//#pragma comment (lib, d3dx10.lib")
 
 #define CATCH_CONFIG_RUNNER
 #include <iostream>
-#include "Catch.hpp"
+#include "Catch.hpp" //this defines <windows.h>
 #if _WIN32
-	#include <windows.h>
+	#include <windows.h> //redundant  ^ but can we count on catch always being there? -TS
 #endif
 
-#if 0
-#include "Catch.hpp" //this defines <windows.h>
-int main(int argc, char* const argv[])
+int z_main(int argc, char* const argv[])
 {
 	//global setup
 	int result = Catch::Session().run(argc, argv);
 	//global cleanup
 	printf("Ampersand Program Begins...\n");
-	std::cin.get();
+	return result;
 }
-#endif
 
 #if _WIN32
+
+static bool temp_fix_wm_destroy_flag;
+IDXGISwapChain *swapchain;
+ID3D11Device *dev;
+ID3D11DeviceContext *devcon;
+
+void InitD3D(HWND hWnd)
+{
+	DXGI_SWAP_CHAIN_DESC scd;
+	ZeroMemory(&scd, sizeof(DXGI_SWAP_CHAIN_DESC));
+	scd.BufferCount = 1;
+	scd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+	scd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
+	scd.OutputWindow = hWnd;
+	scd.SampleDesc.Count = 4;
+	scd.Windowed = TRUE;
+
+	D3D11CreateDeviceAndSwapChain(NULL,
+		D3D_DRIVER_TYPE_HARDWARE,
+		NULL,
+		D3D11_CREATE_DEVICE_DEBUG,
+		NULL,
+		NULL,
+		D3D11_SDK_VERSION,
+		&scd,
+		&swapchain,
+		&dev,
+		NULL,
+		&devcon);
+}
+
+void CleanupD3D()
+{
+	swapchain->Release();
+	dev->Release();
+	devcon->Release();
+}
 
 //The windows proc function, for processing messages
 LRESULT CALLBACK WindowProc(HWND hWnd,
@@ -33,6 +73,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	LPSTR lpCmdLine,
 	INT nCmdShow)
 {
+	char *const temp_fake_args[1]{lpCmdLine};
+	z_main(0, temp_fake_args);
 	//handle for window
 	HWND hWnd;
 	//window information class
@@ -53,15 +95,17 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	//register the window class
 	RegisterClassEx(&wc);
 
+	RECT wr = { 0, 0, 500, 400 };
+	AdjustWindowRect(&wr, WS_OVERLAPPEDWINDOW, false);
 	//create the window and use the results as the handle
 	hWnd = CreateWindowEx(NULL,
 		"WindowClass1", //name of the window class
 		"Our First Windowed Program", //title of the window
 		WS_OVERLAPPEDWINDOW, //window style
 		300, // x-position of the window
-		300, //y-position of the window
-		500, // with of the window
-		400, // height of the window
+		100, //y-position of the window
+		wr.right - wr.left, // with of the window
+		wr.bottom - wr.top, // height of the window
 		NULL, // we have no parent window, NULL
 		NULL, // we aren't using menus, NULL
 		hInstance, // application handle
@@ -70,19 +114,35 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	//display the window on screen
 	ShowWindow(hWnd, nCmdShow);
 
+	//initialize d3d11
+	InitD3D(hWnd);
+
 	//enter the main loop
 	//this struct holds the windows event messages
-	MSG msg;
+	MSG msg = { 0 };
 
-	// wait for the next message in the queue, store the results in 'msg'
-	while (GetMessage(&msg, hWnd, 0, 0))
+	//windows game loop
+	while (true)
 	{
-		//translate keystroke messages into the right format
-		TranslateMessage(&msg);
+		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
+		{
+			//translate keystrokes
+			TranslateMessage(&msg);
 
-		// send the message to the WindowProc function
-		DispatchMessage(&msg);
+			//send to windproc
+			DispatchMessage(&msg);
+
+			if (msg.message == WM_QUIT)
+				break; //exit loop
+		}
+		else
+		{
+			//whatev dog
+		}
 	}
+
+	//release d3d resources
+	CleanupD3D();
 
 	return msg.wParam;
 }
@@ -98,6 +158,8 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 		{
 			// close the application entirely
 			PostQuitMessage(0);
+			//PostQuitMessage is not exiting the program for unknown reasons, just flag to end loop for now -TS
+			temp_fix_wm_destroy_flag = true;
 			return 0;
 		} break;
 	}
