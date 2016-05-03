@@ -6,6 +6,10 @@
 //#pragma comment (lib, "d3dx11.lib")
 //#pragma comment (lib, d3dx10.lib")
 
+// define the screen resolution
+#define SCREEN_WIDTH 800
+#define SCREEN_HEIGHT 600
+
 #define CATCH_CONFIG_RUNNER
 #include <iostream>
 #include "Catch.hpp" //this defines <windows.h>
@@ -28,6 +32,9 @@ static bool temp_fix_wm_destroy_flag;
 IDXGISwapChain *swapchain;
 ID3D11Device *dev;
 ID3D11DeviceContext *devcon;
+ID3D11RenderTargetView *backbuffer;
+
+void RenderFrame(void);
 
 void InitD3D(HWND hWnd)
 {
@@ -35,10 +42,13 @@ void InitD3D(HWND hWnd)
 	ZeroMemory(&scd, sizeof(DXGI_SWAP_CHAIN_DESC));
 	scd.BufferCount = 1;
 	scd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+	scd.BufferDesc.Width = SCREEN_WIDTH;
+	scd.BufferDesc.Height = SCREEN_HEIGHT;
 	scd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 	scd.OutputWindow = hWnd;
 	scd.SampleDesc.Count = 4;
 	scd.Windowed = TRUE;
+	scd.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
 
 	D3D11CreateDeviceAndSwapChain(NULL,
 		D3D_DRIVER_TYPE_HARDWARE,
@@ -52,11 +62,48 @@ void InitD3D(HWND hWnd)
 		&dev,
 		NULL,
 		&devcon);
+
+	// get the address of the back buffer
+	ID3D11Texture2D *pBackBuffer;
+	swapchain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
+
+	//uise the back buffer address to create the render target
+	dev->CreateRenderTargetView(pBackBuffer, NULL, &backbuffer);
+	pBackBuffer->Release();
+
+	//set the render target as the back buffer
+	devcon->OMSetRenderTargets(1, &backbuffer, NULL);
+
+	//set the view[port
+	D3D11_VIEWPORT viewport;
+	ZeroMemory(&viewport, sizeof(D3D11_VIEWPORT));
+
+	viewport.TopLeftX = 0;
+	viewport.TopLeftY = 0;
+	viewport.Width = SCREEN_WIDTH;
+	viewport.Height = SCREEN_HEIGHT;
+
+	devcon->RSSetViewports(1, &viewport);
+}
+
+void RenderFrame(void)
+{
+	float color[4]{0, 0.2f, 0.4f, 1.0f};
+	// clear the back buffer to a deep blue
+	devcon->ClearRenderTargetView(backbuffer, color);
+
+	// do 3D rendering on the back buffer here
+
+	// switch the back buffer and the front buffer
+	swapchain->Present(0, 0);
 }
 
 void CleanupD3D()
 {
+	swapchain->SetFullscreenState(FALSE, NULL); //switch to windowed mode
+
 	swapchain->Release();
+	backbuffer->Release();
 	dev->Release();
 	devcon->Release();
 }
@@ -89,13 +136,13 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	wc.lpfnWndProc = WindowProc;
 	wc.hInstance = hInstance;
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
-	wc.hbrBackground = (HBRUSH)COLOR_WINDOW;
+	//wc.hbrBackground = (HBRUSH)COLOR_WINDOW;
 	wc.lpszClassName = "WindowClass1";
 
 	//register the window class
 	RegisterClassEx(&wc);
 
-	RECT wr = { 0, 0, 500, 400 };
+	RECT wr = { 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT };
 	AdjustWindowRect(&wr, WS_OVERLAPPEDWINDOW, false);
 	//create the window and use the results as the handle
 	hWnd = CreateWindowEx(NULL,
@@ -134,6 +181,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 			if (msg.message == WM_QUIT)
 				break; //exit loop
+
+			RenderFrame();
 		}
 		else
 		{
