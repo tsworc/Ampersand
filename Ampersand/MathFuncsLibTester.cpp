@@ -1,5 +1,5 @@
 #include "Catch.hpp"
-#include "MathFuncsLib.h"
+#include "Math/MathFuncsLib.h"
 #include <iostream>
 
 using namespace MathFuncs;

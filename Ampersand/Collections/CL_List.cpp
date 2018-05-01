@@ -1,4 +1,4 @@
-#include "Collections\CL_List.h"
+#include "CL_List.h"
 
 namespace Collections
 {

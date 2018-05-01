@@ -1,4 +1,4 @@
-#include "Collections\Stack.h"
+#include "Stack.h"
 
 namespace Collections{
 	Stack::Stack()

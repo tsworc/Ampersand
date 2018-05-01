@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -18,13 +18,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -38,7 +38,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -66,22 +69,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Collections\CL_List.cpp" />
+    <ClCompile Include="Collections\DL_List.cpp" />
+    <ClCompile Include="Collections\LinkedList.cpp" />
+    <ClCompile Include="Collections\LQueue.cpp" />
+    <ClCompile Include="Collections\LStack.cpp" />
+    <ClCompile Include="Collections\Queue.cpp" />
+    <ClCompile Include="Collections\Stack.cpp" />
+    <ClCompile Include="Collections\tree.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MathFuncsLibTester.cpp" />
+    <ClCompile Include="Math\MathFuncsLib.cpp" />
+    <ClCompile Include="Math\Vector3.cpp" />
     <ClCompile Include="TestCollections.cpp" />
     <ClCompile Include="TestGenericCollections.cpp" />
     <ClCompile Include="TestVectors.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AmpCollections\AmpCollections.vcxproj">
-      <Project>{a9ecf180-a3cb-48d1-a4ac-1c0bdce0ee0a}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\AmpMath\AmpMath.vcxproj">
-      <Project>{af22ade7-c567-4126-a769-222af72860c7}</Project>
-    </ProjectReference>
+    <ClInclude Include="Collections\CL_List.h" />
+    <ClInclude Include="Collections\DL_List.h" />
+    <ClInclude Include="Collections\Generic\GenericRingBuffer.h" />
+    <ClInclude Include="Collections\Generic\GenericStack.h" />
+    <ClInclude Include="Collections\LinkedList.h" />
+    <ClInclude Include="Collections\LQueue.h" />
+    <ClInclude Include="Collections\LStack.h" />
+    <ClInclude Include="Collections\Queue.h" />
+    <ClInclude Include="Collections\Stack.h" />
+    <ClInclude Include="Collections\tree.h" />
+    <ClInclude Include="Math\MathFuncsLib.h" />
+    <ClInclude Include="Math\Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

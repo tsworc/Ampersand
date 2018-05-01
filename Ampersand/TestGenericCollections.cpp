@@ -1,6 +1,6 @@
 #include "Catch.hpp"
-#include "Header\Collections\Generic\GenericStack.h"
-#include "Header\Collections\Generic\GenericRingBuffer.h"
+#include "Collections\Generic\GenericStack.h"
+#include "Collections\Generic\GenericRingBuffer.h"
 
 SCENARIO("Generic Stacks can store any data type. They can push, pop, and count.")
 {

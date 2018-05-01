@@ -1,4 +1,4 @@
-#include "Collections\LStack.h"
+#include "LStack.h"
 
 namespace Collections
 {

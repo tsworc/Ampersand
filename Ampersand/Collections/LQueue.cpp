@@ -1,4 +1,4 @@
-#include "Collections\LQueue.h"
+#include "LQueue.h"
 
 namespace Collections
 {

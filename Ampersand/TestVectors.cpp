@@ -1,5 +1,5 @@
 #include "Catch.hpp"
-#include "Vector3.h"
+#include "Math\Vector3.h"
 
 SCENARIO("Vectors can be coordinates or directions. Operations can be performed on vectors like Dot product, cross product, normalization, etc.")
 {

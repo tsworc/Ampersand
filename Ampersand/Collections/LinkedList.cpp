@@ -1,4 +1,4 @@
-#include "Collections\LinkedList.h"
+#include "LinkedList.h"
 
 namespace Collections
 {

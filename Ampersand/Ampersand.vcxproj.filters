@@ -16,6 +16,21 @@
     <Filter Include="Source Files\Testing">
       <UniqueIdentifier>{4dd00b03-79a3-439c-8e79-767a43ae93d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{97787988-1d1a-4ffd-a84f-847ba36d962f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{c3693bd7-0a90-4043-8b73-acf23c2618fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collections">
+      <UniqueIdentifier>{ca99e857-5c19-4080-a66f-5303bcdebcf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Collections">
+      <UniqueIdentifier>{13a09d3f-d878-400d-8034-8df9559800fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collections\Generic">
+      <UniqueIdentifier>{09dd363c-7d9c-4df4-88c6-d5d03544983c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -33,10 +48,76 @@
     <ClCompile Include="TestVectors.cpp">
       <Filter>Source Files\Testing</Filter>
     </ClCompile>
+    <ClCompile Include="Collections\DL_List.cpp">
+      <Filter>Source Files\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="Collections\LinkedList.cpp">
+      <Filter>Source Files\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="Collections\LQueue.cpp">
+      <Filter>Source Files\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="Collections\LStack.cpp">
+      <Filter>Source Files\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="Collections\Queue.cpp">
+      <Filter>Source Files\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="Collections\Stack.cpp">
+      <Filter>Source Files\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="Collections\tree.cpp">
+      <Filter>Source Files\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="Collections\CL_List.cpp">
+      <Filter>Source Files\Collections</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\MathFuncsLib.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Vector3.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\CL_List.h">
+      <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\DL_List.h">
+      <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\LinkedList.h">
+      <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\LQueue.h">
+      <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\LStack.h">
+      <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\Queue.h">
+      <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\Stack.h">
+      <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\tree.h">
+      <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\Generic\GenericRingBuffer.h">
+      <Filter>Header Files\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="Collections\Generic\GenericStack.h">
+      <Filter>Header Files\Collections\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\MathFuncsLib.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Vector3.h">
+      <Filter>Header Files\Math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

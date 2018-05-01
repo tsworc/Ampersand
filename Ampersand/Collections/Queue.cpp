@@ -1,4 +1,4 @@
-#include "Collections\Queue.h"
+#include "Queue.h"
 
 namespace Collections{
 	Queue::Queue()

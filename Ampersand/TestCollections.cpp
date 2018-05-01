@@ -1,13 +1,13 @@
 #include "Catch.hpp"
-#include "Header\Collections\CL_List.h"
-#include "Header\Collections\DL_List.h"
-#include "Header\Collections\Generic\GenericStack.h"
-#include "Header\Collections\LQueue.h"
-#include "Header\Collections\LStack.h"
-#include "Header\Collections\Queue.h"
-#include "Header\Collections\Stack.h"
-#include "Header\Collections\tree.h"
-#include "Header\Collections\LinkedList.h"
+#include "Collections\CL_List.h"
+#include "Collections\DL_List.h"
+#include "Collections\Generic\GenericStack.h"
+#include "Collections\LQueue.h"
+#include "Collections\LStack.h"
+#include "Collections\Queue.h"
+#include "Collections\Stack.h"
+#include "Collections\tree.h"
+#include "Collections\LinkedList.h"
 
 SCENARIO("CL_List add, add at beginning, delete, count, and display. It has a copy constructor and operators to check equality.")
 {
