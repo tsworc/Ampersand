@@ -81,8 +81,10 @@
     <ClCompile Include="MathFuncsLibTester.cpp" />
     <ClCompile Include="Math\MathFuncsLib.cpp" />
     <ClCompile Include="Math\Vector3.cpp" />
+    <ClCompile Include="Shapes\Rectangle.cpp" />
     <ClCompile Include="TestCollections.cpp" />
     <ClCompile Include="TestGenericCollections.cpp" />
+    <ClCompile Include="TestRectangles.cpp" />
     <ClCompile Include="TestVectors.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +101,7 @@
     <ClInclude Include="Collections\tree.h" />
     <ClInclude Include="Math\MathFuncsLib.h" />
     <ClInclude Include="Math\Vector3.h" />
+    <ClInclude Include="Shapes\Rectangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

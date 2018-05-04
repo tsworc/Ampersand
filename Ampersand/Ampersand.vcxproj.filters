@@ -31,6 +31,12 @@
     <Filter Include="Header Files\Collections\Generic">
       <UniqueIdentifier>{09dd363c-7d9c-4df4-88c6-d5d03544983c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Shapes">
+      <UniqueIdentifier>{e4644241-e0a9-4442-bc04-75788dbc09f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shapes">
+      <UniqueIdentifier>{d429ed57-231b-486a-9f4d-32cb3d3b0d14}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -78,6 +84,12 @@
     <ClCompile Include="Math\Vector3.cpp">
       <Filter>Source Files\Math</Filter>
     </ClCompile>
+    <ClCompile Include="Shapes\Rectangle.cpp">
+      <Filter>Source Files\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="TestRectangles.cpp">
+      <Filter>Source Files\Testing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Catch.hpp">
@@ -118,6 +130,9 @@
     </ClInclude>
     <ClInclude Include="Math\Vector3.h">
       <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Shapes\Rectangle.h">
+      <Filter>Header Files\Shapes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
